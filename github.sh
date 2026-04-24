@@ -4,5 +4,5 @@ git pull origin main --ff-only
 
 # 仅在代码有更新时重启 PM2
 if [ $? -eq 0 ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse HEAD@{1})" ]; then
-  pm2 restart all
+  pm2 restart all >> /var/log/pm2-deploy.log 2>&1
 fi
