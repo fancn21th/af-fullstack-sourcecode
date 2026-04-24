@@ -1,3 +1,3 @@
-##! /usr/bin/bash
-#
-#git pull origin main
+#!/bin/bash
+
+git pull origin main
